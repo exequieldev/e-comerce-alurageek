@@ -20,15 +20,24 @@
 
     <!-- css -->
     <link rel="stylesheet" href="./src/css/reset.css" />
-    <link rel="stylesheet" href="./src/css/home-style/header.css" />
-    <link rel="stylesheet" href="./src/css/home-style/main-content.css" />
+    <link rel="stylesheet" href="./src/css/login-style/header.css" />
+    <link
+      rel="stylesheet"
+      href="./src/css/administration-product/main-content.css"
+    />
     <link rel="stylesheet" href="./src/css/home-style/about-us.css" />
     <link rel="stylesheet" href="./src/css/home-style/contact.css" />
     <link rel="stylesheet" href="./src/css/home-style/footer.css" />
+    <link rel="stylesheet" href="./src/css/login-style/login.css" />
     <link rel="stylesheet" href="./src/css/search-style/search.css" />
     <link rel="stylesheet" href="./src/css/modal-style/modal.css" />
+    <link rel="stylesheet" href="./src/css/add-product-style/add-product.css" />
+    <link
+      rel="stylesheet"
+      href="./src/css/administration-product/modal-form.css"
+    />
 
-    <title>AluraGreek</title>
+    <title>administration product</title>
   </head>
   <body>
     <header class="header">
@@ -38,7 +47,6 @@
             <img class="nav__logo" src="./src/assets/img/Logo.svg" alt="logo" />
           </a>
         </div>
-        <a class="nav__btn-login" href="#" title="login">Login</a>
         <div class="nav__search-container">
           <label for="search">
             <input
@@ -55,18 +63,6 @@
           </label>
         </div>
       </nav>
-
-      <section class="hero">
-        <div class="hero__promotinal-container">
-          <h2 class="hero__title">Julio Promocional</h2>
-          <p class="hero__promotinal">
-            Productos selecionados con 33% de descuento
-          </p>
-          <a href="#consoles" title="ver consolas" class="hero__btn"
-            >Ver consolas</a
-          >
-        </div>
-      </section>
       <div class="nav__search-mobile-container">
         <label for="search-mobile">
           <input
@@ -79,84 +75,94 @@
     </header>
 
     <main class="main">
-      <section class="main__product-search">
-        <!-- secccion de Star Wars -->
-        <section class="main__section-starwars">
-          <div class="main__head-section">
-            <h2 class="main__section-title">Star Wars</h2>
-            <div class="main__btn-more-content">
-              <a
-                class="main__btn"
-                href="./see-more-page.html"
-                title="ver contenido de starwarks"
-                data-title="Star Wars"
-              >
-                Ver todos
-                <span class="arrow">
-                  <img
-                    src="./src/assets/icon/arrow.svg"
-                    alt="ver contenido de starwars"
-                    class="arrow__img"
-                  />
-                </span>
-              </a>
-            </div>
+      <section class="modal__form">
+        <form class="add-product__from">
+          <div class="modal__close-edit">
+            <img
+              class="modal__close"
+              src="./src/assets/icon/Close.svg"
+              alt="icono de cierre de modal"
+            />
           </div>
 
-          <!-- cards -->
-          <section class="main__section-cards"></section>
-        </section>
-
-        <!-- secccion de consolas -->
-        <section id="consoles" class="main__section-consoles">
-          <div class="main__head-section">
-            <h2 class="main__section-title">Consolas</h2>
-            <div class="main__btn-more-content">
-              <a
-                class="main__btn"
-                href="./see-more-page.html"
-                title="ver contenido de consolas"
-                data-title="Consolas"
-              >
-                Ver todos
-                <span class="arrow">
-                  <img
-                    src="./src/assets/icon/arrow.svg"
-                    alt="ver contenido de Consolas"
-                    class="arrow__img"
-                  />
-                </span>
-              </a>
-            </div>
+          <h2 class="add-product__title">Editar producto</h2>
+          <div class="add-product__field">
+            <label class="add-product__field-label" for="urlImg">
+              URL de la imagen
+            </label>
+            <input
+              class="add-product__field-input"
+              name="urlImg"
+              type="text"
+              id="urlImg"
+            />
           </div>
-
-          <!-- cards -->
-          <section class="main__section-cards"></section>
-        </section>
-
-        <!-- secccion de Diversos -->
-        <section class="main__section-various">
-          <div class="main__head-section">
-            <h2 class="main__section-title">Diversos</h2>
-            <div class="main__btn-more-content">
-              <a
-                class="main__btn"
-                href="./see-more-page.html"
-                title="ver diveros productos"
-                data-title="Diversos"
-              >
-                Ver todos
-                <span class="arrow">
-                  <img
-                    src="./src/assets/icon/arrow.svg"
-                    alt="ver contenido de Diversos"
-                    class="arrow__img"
-                  />
-                </span>
-              </a>
-            </div>
+          <div class="add-product__field">
+            <label class="add-product__field-label" for="category">
+              Categoría
+            </label>
+            <input
+              class="add-product__field-input"
+              name="category"
+              type="text"
+              id="category"
+            />
           </div>
+          <div class="add-product__field">
+            <label class="add-product__field-label" for="name">
+              Nombre del producto
+            </label>
+            <input
+              class="add-product__field-input"
+              name="name"
+              type="text"
+              id="name"
+            />
+          </div>
+          <div class="add-product__field">
+            <label class="add-product__field-label" for="price">
+              Precio del producto
+            </label>
+            <input
+              class="add-product__field-input"
+              name="price"
+              type="text"
+              id="price"
+            />
+          </div>
+          <div class="add-product__field">
+            <label class="add-product__field-label" for="description">
+              Descripción del producto
+            </label>
 
+            <textarea
+              class="add-product__field-textarea"
+              name="description"
+              id="description"
+            ></textarea>
+          </div>
+          <h3 class="add-product__alert"></h3>
+
+          <button class="add-product__btn">Editar Producto</button>
+        </form>
+      </section>
+
+      <!-- administration product -->
+      <section class="main__section-product">
+        <div class="main__head-section">
+          <h2 class="main__section-title">Todos los produtos</h2>
+          <div class="main__btn-add-product">
+            <a
+              class="main__btn"
+              href="./add-product.html"
+              title="Agregar producto"
+            >
+              Agregar producto
+            </a>
+          </div>
+        </div>
+
+        <section class="main__product-search admin">
           <!-- cards -->
           <section class="main__section-cards"></section>
         </section>
@@ -289,14 +295,32 @@
     <template id="template-card">
       <div class="main__card">
         <div class="main__card-img-container">
-          <img class="main__card-img" src="" alt="cartas de producto" />
+          <div class="main__card-action">
+            <img
+              class="main__card-img-action action__delete"
+              src="./src/assets/icon/delete-icon.svg"
+              alt="icono eliminar"
+            />
+            <img
+              class="main__card-img-action action__edit"
+              src="./src/assets/icon/edit-icon.svg"
+              alt="icono editar"
+            />
+          </div>
+
+          <img
+            class="main__card-img"
+            src="https://i.imgur.com/kkPW4EM.png"
+            alt="producto "
+          />
         </div>
         <h2 class="main__card-title">Producto XYZ</h2>
         <p class="main__card-price">$60,00</p>
-        <a class="main__card-link" href="">Ver Producto</a>
+        <a class="main__card-link" href="#">Ver Producto</a>
       </div>
     </template>
 
     <script type="module" src="./src/js/index.js"></script>
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
   </body>
 </html>
